@@ -1,0 +1,58 @@
+db.courses.find({name:'java'})
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+db.courses.find({name:'java',duration:420})
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+db.courses.find({name:'java',duration:20})
+db.courses.find({fees:20000})
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350
+}
+db.courses.find({fees:25000})
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340
+}
+db.courses.find({fees:25000},{name:true, fees:true})
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000
+}
+db.courses.find({fees:25000},{name:true, fees:true, _id:false})
+{
+  name: 'java',
+  fees: 25000
+}
+{
+  name: 'mongodb',
+  fees: 25000
+}
+logic
+
+

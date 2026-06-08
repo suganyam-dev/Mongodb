@@ -1,0 +1,227 @@
+use logic
+switched to db logic
+db.courses.insertOne({name :'java', fees:25000, duration: 420})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a268c52ac221a225bb14627')
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+db.courses.insertMany([{name :'python', fees:30000, duration:450}, {name:'c', fees:15000, duration: 320}, {name:'c++', fees:20000, duration:350}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a268d84ac221a225bb14628'),
+    '1': ObjectId('6a268d84ac221a225bb14629'),
+    '2': ObjectId('6a268d84ac221a225bb1462a')
+  }
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350
+}
+db.courses.insertOne({name:'react', fees:14000, duration 240, completed:true, certifiedDate: new Date(), tutor:['suganya','nazi','malathi'], relatedCourses:{name:Django, fees:22000, duration:370}})
+SyntaxError: Unexpected token, expected "," (1:57)
+
+> 1 | db.courses.insertOne({name:'react', fees:14000, duration 240, completed:true, certifiedDate: new Date(), tutor:['suganya','nazi','malathi'], relatedCourses:{name:Django, fees:22000, duration:370}})
+    |                                                          ^
+db.courses.insertOne({name:'react', fees:14000, duration 240,
+                      completed:true, certifiedDate: new Date(), 
+                      tutor:['suganya','nazi','malathi'], 
+                      relatedCourses:{name:Django, fees:22000, duration:370}
+                     })
+SyntaxError: Unexpected token, expected "," (1:57)
+
+> 1 | db.courses.insertOne({name:'react', fees:14000, duration 240,
+    |                                                          ^
+  2 |                       completed:true, certifiedDate: new Date(), 
+  3 |                       tutor:['suganya','nazi','malathi'], 
+  4 |                       relatedCourses:{name:Django, fees:22000, duration:370}
+db.courses.insertOne({name:'react', fees:14000, duration:240,
+                      completed:true, certifiedDate: new Date(), 
+                      tutor:['suganya','nazi','malathi'], 
+                      relatedCourses:{name:Django, fees:22000, duration:370}
+                     })
+ReferenceError: Django is not defined
+db.courses.insertOne({name:'react', fees:14000, duration:240,
+                      completed:true, certifiedDate: new Date(), 
+                      tutor:["suganya","nazi","malathi"], 
+                      relatedCourses:{name:Django, fees:22000, duration:370}
+                     })
+ReferenceError: Django is not defined
+db.courses.insertOne({name:'react', fees:14000, duration:240,
+                      completed:true, certifiedDate: new Date(), 
+                      tutor:["suganya","nazi","malathi"], 
+                      relatedCourses:{name:'Django', fees:22000, duration:370}
+                     })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a2691f7ac221a225bb1462b')
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340
+}
+{
+  _id: ObjectId('6a2691f7ac221a225bb1462b'),
+  name: 'react',
+  fees: 14000,
+  duration: 240,
+  completed: true,
+  certifiedDate: 2026-06-08T09:57:11.487Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'Django',
+    fees: 22000,
+    duration: 370
+  }
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340
+}
+db.courses.insertOne({name:'react', fees:14000, duration:240,
+                      completed:true, certifiedDate: new Date(), 
+                      tutor:["suganya","nazi","malathi"], 
+                      relatedCourses:{name:'node.js', fees:22000, duration:370}
+                     })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a26924eac221a225bb1462c')
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'react',
+  fees: 14000,
+  duration: 240,
+  completed: true,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  }
+}
+logic
+
+

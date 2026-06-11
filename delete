@@ -1,0 +1,337 @@
+show dbs
+admin   40.00 KiB
+config  48.00 KiB
+local   72.00 KiB
+logic   72.00 KiB
+new     72.00 KiB
+db.courses.find()
+db.courses.find()
+db.courses.find()
+db.courses.insertOne({name:'javascript', fees:13000, duration:240})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a279462d74f228c8aaae95a')
+}
+db.courses.find()
+{
+  _id: ObjectId('6a279462d74f228c8aaae95a'),
+  name: 'javascript',
+  fees: 13000,
+  duration: 240
+}
+use logic
+switched to db logic
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.insertOne({name:'javascript', fees:13000, duration:240})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a279586d74f228c8aaae95b')
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+{
+  _id: ObjectId('6a279586d74f228c8aaae95b'),
+  name: 'javascript',
+  fees: 13000,
+  duration: 240
+}
+db.courses.insertMany({name:'javascript', fees:1000, duration:20})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.courses.insertOne({name:'javascript', fees:1000, duration:20})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a279645d74f228c8aaae95c')
+}
+db.courses.insertMany([{name:'javascript', fees:2000, duration:40},{name:'javascript', fees:3000, duration:30}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a279693d74f228c8aaae95d'),
+    '1': ObjectId('6a279693d74f228c8aaae95e')
+  }
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+{
+  _id: ObjectId('6a279586d74f228c8aaae95b'),
+  name: 'javascript',
+  fees: 13000,
+  duration: 240
+}
+{
+  _id: ObjectId('6a279645d74f228c8aaae95c'),
+  name: 'javascript',
+  fees: 1000,
+  duration: 20
+}
+{
+  _id: ObjectId('6a279693d74f228c8aaae95d'),
+  name: 'javascript',
+  fees: 2000,
+  duration: 40
+}
+{
+  _id: ObjectId('6a279693d74f228c8aaae95e'),
+  name: 'javascript',
+  fees: 3000,
+  duration: 30
+}
+db.courses.deleteOne({name:'javascrpt'})
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.courses.deleteOne({name:'javascript'})
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+{
+  _id: ObjectId('6a279645d74f228c8aaae95c'),
+  name: 'javascript',
+  fees: 1000,
+  duration: 20
+}
+{
+  _id: ObjectId('6a279693d74f228c8aaae95d'),
+  name: 'javascript',
+  fees: 2000,
+  duration: 40
+}
+{
+  _id: ObjectId('6a279693d74f228c8aaae95e'),
+  name: 'javascript',
+  fees: 3000,
+  duration: 30
+}
+db.courses.deleteMany({name:'javascript'})
+{
+  acknowledged: true,
+  deletedCount: 3
+}
+db.courses.find({duration:{$gt:360}})
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}

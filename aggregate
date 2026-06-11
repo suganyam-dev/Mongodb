@@ -1,0 +1,355 @@
+db.courses.find({name:'REACT'})
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.updateOne({name:'REACT'},{$push:{tutor:'Rashmika'})
+SyntaxError: Unexpected token, expected "," (1:61)
+
+> 1 | db.courses.updateOne({name:'REACT'},{$push:{tutor:'Rashmika'})
+    |                                                              ^
+db.courses.updateOne({name:'REACT'},{$push:{tutor:'Rashmika'}}})
+SyntaxError: Unexpected token, expected "," (1:62)
+
+> 1 | db.courses.updateOne({name:'REACT'},{$push:{tutor:'Rashmika'}}})
+    |                                                               ^
+db.courses.updateOne({name:'REACT'},{$push:{tutor:'Rashmika'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi',
+    'Rashmika'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.updateOne({name:'REACT'},{$addToSet:{tutor:'Rashmika'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi',
+    'Rashmika'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.updateOne({name:'REACT'},{$pull:{tutor:'Rashmika'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'malathi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.updateOne({name:'REACT'},{$pop:{tutor:1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.courses.find()
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.updateOne({name:'REACT'},{$push:{tutor:'Rashmika'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.courses.find().sort({fees:-1})
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
+{
+  _id: ObjectId('6a268e96115d55a20b8b2218'),
+  name: 'mongodb',
+  fees: 25000,
+  duration: 340,
+  completed: true
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb1462a'),
+  name: 'c++',
+  fees: 20000,
+  duration: 350,
+  completed: false
+}
+{
+  _id: ObjectId('6a268d84ac221a225bb14629'),
+  name: 'c',
+  fees: 15000,
+  duration: 320,
+  completed: false
+}
+{
+  _id: ObjectId('6a26924eac221a225bb1462c'),
+  name: 'REACT',
+  fees: 14000,
+  duration: 240,
+  certifiedDate: 2026-06-08T09:58:38.072Z,
+  tutor: [
+    'suganya',
+    'nazi',
+    'Rashmika'
+  ],
+  relatedCourses: {
+    name: 'node.js',
+    fees: 22000,
+    duration: 370
+  },
+  completed: true
+}
+db.courses.find().sort({fees:-1}).limit(2)
+{
+  _id: ObjectId('6a268d84ac221a225bb14628'),
+  name: 'python',
+  fees: 30000,
+  duration: 450,
+  completed: false
+}
+{
+  _id: ObjectId('6a268c52ac221a225bb14627'),
+  name: 'java',
+  fees: 25000,
+  duration: 420,
+  completed: true
+}
